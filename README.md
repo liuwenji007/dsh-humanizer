@@ -89,9 +89,10 @@ const r = detectAiFlavor('你的文本');
 
 ## 相关项目
 
-- [dsh-trust-check](https://github.com/liuwenji007/dsh-trust-check) — 静态披露插件能力与风险：装第三方插件前，先看它会干什么。
-- [dsh-market](https://github.com/dsh-market/dsh-market) — DeepSeek Harness 可视化插件市场。
-- [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) — dsh 插件精选列表。
+同一作者的其他 dsh 插件：
+
+- [dsh-trust-check](https://github.com/liuwenji007/dsh-trust-check) — 静态披露插件的能力与风险（权限、安装脚本、注册注入）：装第三方插件前，先看它会干什么。
+- [dsh-muyu](https://github.com/liuwenji007/dsh-muyu) — DeepSeek Harness 电子木鱼：等 loop 时敲头摸鱼。
 
 ## License
 
