@@ -19,6 +19,15 @@
     "cordis.yml"
   ],
   "description": "生成前注入人味风格约束 + AI 味检测报告 — 判断交给代码，风格交给 system prompt。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "humanizer",
+    "ai-flavor",
+    "ai-detection",
+    "去AI味"
+  ],
   "license": "MIT",
   "peerDependencies": {
     "@deepseek-ai/cordis": "^4.0.1",

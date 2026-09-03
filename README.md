@@ -1,6 +1,9 @@
 # dsh-humanizer
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 生成前注入「人味」风格约束 + AI 味检测报告。
+Inject "human-flavor" style constraints before generation, plus an AI-flavor detection report — judged by code (zero token, reproducible), style shaped by system prompt.
 
 > 判断交给代码（可复现、不烧 token），风格交给 system prompt（生成前约束，不做事后改写）。
 
@@ -15,14 +18,13 @@
 它是 DSH 的 **bundle 插件**（声明了 `dsh.bundle.patch`），装进某个 profile 会自动进入 `dsh.profile.bundles` 层叠：
 
 ```bash
-# 从 registry 安装
-dsh plugin --profile <profile名> add dsh-humanizer
-
-# 本地 / 源码安装（相对路径会锚定到你执行命令的目录）
+# 本地 / 源码安装（推荐；相对路径会锚定到你执行命令的目录）
 dsh plugin --profile <profile名> add link:/abs/path/to/dsh-humanizer
 ```
 
 `dsh plugin` 转发给 pnpm 并「对账」：只要依赖解析到声明了 `dsh.bundle` 的包，就自动追加进 `dsh.profile.bundles`。
+
+> 注意：npm 上的 `dsh-humanizer` 包名已被另一位作者的同类插件占用（只做写作润色、不做检测，与本插件定位不同）。本仓库尚未发布 npm；发布时会使用作用域名 `@liuwenji007/dsh-humanizer`，届时安装命令为 `dsh plugin add @liuwenji007/dsh-humanizer`。
 
 ## 配置
 
@@ -84,6 +86,12 @@ const r = detectAiFlavor('你的文本');
 - 分数是密度导向的，超短文本天然更敏感（已加 80 字下限缓解）。
 
 拿它量自己、心里有数即可；需要下笔方向的，看它生成前注入的风格约束，而不是拿它改稿。
+
+## 相关项目
+
+- [dsh-trust-check](https://github.com/liuwenji007/dsh-trust-check) — 静态披露插件能力与风险：装第三方插件前，先看它会干什么。
+- [dsh-market](https://github.com/dsh-market/dsh-market) — DeepSeek Harness 可视化插件市场。
+- [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) — dsh 插件精选列表。
 
 ## License
 
