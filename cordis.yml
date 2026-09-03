@@ -1,0 +1,8 @@
+# dsh-humanizer profile patch layer
+- insert:
+    - id: dsh-humanizer
+      name: dsh-humanizer
+      config:
+        enabled: true
+        domain: copywriting
+        voice: ''

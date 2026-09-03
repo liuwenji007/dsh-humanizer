@@ -1,0 +1,33 @@
+{
+  "name": "dsh-humanizer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liuwenji007/dsh-humanizer.git"
+  },
+  "version": "0.1.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.yml"
+  ],
+  "description": "生成前注入人味风格约束 + AI 味检测报告 — 判断交给代码，风格交给 system prompt。",
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-tools": "^0.1.0-rc.5",
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.yml"
+    }
+  }
+}
